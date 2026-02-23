@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=4 uid="uid://lkpkjrd0d45s"]
+
+[ext_resource type="Script" uid="uid://brwur27tf2ept" path="res://menu_manager.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cv37yarg6uqmg" path="res://assets/objects/Lanea Zimmerman/things_0.png" id="1_yqjtg"]
+[ext_resource type="TileSet" uid="uid://cyjowvd7s5hdf" path="res://assets/tiles/Lanea Zimmerman/basictiles.tres" id="2_yqjtg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
+atlas = ExtResource("1_yqjtg")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
+atlas = ExtResource("1_yqjtg")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p57ef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbhrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iywne")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_lnu2h")
+
+[node name="Train" type="AnimatedSprite2D" parent="."]
+z_index = 100
+position = Vector2(1160, 828)
+sprite_frames = SubResource("SpriteFrames_p57ef")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(6, 5)
+tile_map_data = PackedByteArray("AABGADEAAAADAAEAAABEADMAAAADAAEAAABDADEAAAADAAEAAABDADIAAAADAAEAAABDADMAAAADAAEAAABEADQAAAADAAEAAABFADMAAAADAAEAAABGADMAAAAAAAgAAABHADMAAAADAAEAAABHADIAAAADAAEAAABGADIAAAADAAEAAABFADIAAAADAAEAAABEADEAAAADAAEAAABFADEAAAADAAEAAABHADEAAAADAAEAAABEADIAAAAAAAgAAABDADQAAAADAAEAAABFADQAAAADAAEAAABGADQAAAADAAEAAABHADQAAAADAAEAAAD+/wAAAAADAAYAAAAAAP//AAAFAAYAAAD+//7/AAAEAAUAAAACAAAAAAAFAAcAAAA=")
+tile_set = ExtResource("2_yqjtg")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 115.0
+offset_top = -45.0
+offset_right = 173.0
+offset_bottom = 110.0
+
+[node name="ItemList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2

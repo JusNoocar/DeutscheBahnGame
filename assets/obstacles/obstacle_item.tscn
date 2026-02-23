@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkxw0dbxfgc85"]
+
+[ext_resource type="Script" uid="uid://cl71fawjvqerj" path="res://scripts/obstacle.gd" id="1_uhjoy"]
+
+[node name="ObstacleItem" type="PanelContainer"]
+custom_minimum_size = Vector2(450, 60)
+offset_right = 300.0
+offset_bottom = 60.0
+script = ExtResource("1_uhjoy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Description" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3

@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=3 uid="uid://budyr47r4sm0o"]
+
+[ext_resource type="Script" uid="uid://rjn8dr2ibkia" path="res://scripts/menus/instructions.gd" id="1_dkfqi"]
+[ext_resource type="Texture2D" uid="uid://jetki3uivjvi" path="res://undo.png" id="2_nisbi"]
+[ext_resource type="Script" uid="uid://csgr7gkwc51as" path="res://scripts/menus/elements/tab_container.gd" id="3_njqp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nisbi"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.8980392, 0.8980392, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7su1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njqp3"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c00ax"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.8980392, 0.8980392, 0.8980392, 1)
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_dkfqi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 77.0
+offset_bottom = 72.0
+pivot_offset = Vector2(20, 20)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Main Menu"
+texture_normal = ExtResource("2_nisbi")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.8392157, 0.3137255, 0.8745098)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -153.5
+offset_top = 20.0
+offset_right = 153.5
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 53
+text = "Instructions"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -206.0
+offset_right = 576.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_selected_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+theme_override_colors/font_hovered_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+theme_override_colors/font_unselected_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/panel = SubResource("StyleBoxFlat_nisbi")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_r7su1")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_njqp3")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_c00ax")
+current_tab = 0
+tabs_position = 1
+script = ExtResource("3_njqp3")
+
+[node name="Gameplay" type="RichTextLabel" parent="TabContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+text = "[b]Goal[/b]: Try to create as much of a delay as possible without getting caught / fired!
+
+1. Place obstacles on different tracks. Once you run the simulation, obstacles can't be removed.
+2. Run the simulation!
+3. Keep track of the score bar at the top of the screen. If it's too low, pause the game and add more obstacles."
+fit_content = true
+metadata/_tab_index = 0
+
+[node name="Obstacles" type="RichTextLabel" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+text = "TODO: add the different types of obstacles"
+fit_content = true
+metadata/_tab_index = 1

@@ -1,0 +1,9 @@
+res://scripts/train_navigation.gd
+res://scenes/game.tscn
+res://assets/tiles/Lanea Zimmerman/basictiles.tres
+res://assets/tiles/OG/rails.tres
+res://scripts/menus/menu_manager.gd
+res://scripts/obstacle.gd
+res://scripts/tracks_manager.gd
+res://scripts/globals.gd
+res://scripts/GlobalVars.gd

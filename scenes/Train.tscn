@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwlicxsgyaqkh"]
+
+[ext_resource type="Script" uid="uid://bdpq6hqce0rxo" path="res://scripts/train_scene.gd" id="1_bs37r"]
+[ext_resource type="Texture2D" uid="uid://b8psqh8rssa6a" path="res://assets/trains/OG/train_red.png" id="2_426cx"]
+
+[node name="Train" type="Node2D" node_paths=PackedStringArray("head_sprite", "wagon_sprite")]
+script = ExtResource("1_bs37r")
+head_sprite = NodePath("HeadSprite")
+wagon_sprite = NodePath("WagonSprite")
+
+[node name="HeadSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_426cx")
+hframes = 4
+vframes = 2
+
+[node name="WagonSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_426cx")
+hframes = 4
+vframes = 2

@@ -1,0 +1,116 @@
+[gd_scene load_steps=3 format=3 uid="uid://vm1mwh122n0i"]
+
+[ext_resource type="Script" uid="uid://ur44d8ivq2gp" path="res://scripts/menus/results_menu.gd" id="1_kqyoe"]
+[ext_resource type="Texture2D" uid="uid://jetki3uivjvi" path="res://undo.png" id="2_5ku1t"]
+
+[node name="ResultsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqyoe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.0
+offset_top = 54.0
+offset_right = 158.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 53
+text = "placeholder"
+horizontal_alignment = 1
+
+[node name="TotalDelay" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 166.0
+offset_right = 1077.0
+offset_bottom = 224.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+text = "[b]Total delay:[/b]"
+fit_content = true
+horizontal_alignment = 1
+metadata/_tab_index = 0
+
+[node name="Score" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 225.0
+offset_right = 1081.0
+offset_bottom = 280.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+text = "00 minutes"
+fit_content = true
+horizontal_alignment = 1
+metadata/_tab_index = 0
+
+[node name="Message" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 312.0
+offset_right = 1079.0
+offset_bottom = 551.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+metadata/_tab_index = 0
+
+[node name="Back" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 77.0
+offset_bottom = 72.0
+pivot_offset = Vector2(20, 20)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Main Menu"
+texture_normal = ExtResource("2_5ku1t")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.8392157, 0.3137255, 0.8745098)

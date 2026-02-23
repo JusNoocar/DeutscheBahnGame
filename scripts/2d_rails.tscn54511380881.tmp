@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://10p3f7418nqf"]
+
+[ext_resource type="Script" uid="uid://b5tmhyutgxy2y" path="res://camera_2d.gd" id="2_r8jqm"]
+
+[sub_resource type="GDScript" id="GDScript_nl77l"]
+script/source = "
+"
+
+[node name="2dRails" type="Node2D"]
+script = SubResource("GDScript_nl77l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+script = ExtResource("2_r8jqm")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://10p3f7418nqf"]
+
+[ext_resource type="Script" uid="uid://n870105pq3r8" path="res://scripts/cities.gd" id="1_nl77l"]
+[ext_resource type="PackedScene" uid="uid://b22y54i756g72" path="res://scenes/Zoomcamera.tscn" id="2_1p5r0"]
+
+[node name="2dRails" type="Node2D"]
+script = ExtResource("1_nl77l")
+
+[node name="Camera2D" parent="." instance=ExtResource("2_1p5r0")]
+anchor_mode = 0
+zoom = Vector2(0.5, 0.5)
